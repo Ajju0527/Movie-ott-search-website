@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and discover movies with detailed information">
+    <title>🎬 Movie & OTT Search Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">🎬 Movie & OTT Search</h1>
+            <p class="subtitle">Discover your favorite movies</p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Search for a movie..."
+                    autocomplete="off"
+                >
+                <button id="clearBtn" class="clear-btn" title="Clear search">✕</button>
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+        </section>
+
+        <!-- Recent Searches Section -->
+        <section id="recentSearches" class="recent-searches">
+            <h3 class="recent-title">Recent Searches</h3>
+            <div id="recentList" class="recent-list"></div>
+        </section>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="loading hidden">
+            <div class="loader"></div>
+            <p>Loading movie data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <!-- Movie Card Section -->
+        <section id="movieCard" class="movie-card hidden">
+            <div class="movie-poster-container">
+                <img id="moviePoster" src="" alt="Movie Poster" class="movie-poster">
+                <div id="ratingBadge" class="rating-badge">
+                    <span class="star">⭐</span>
+                    <span id="ratingValue"></span>
+                </div>
+            </div>
+
+            <div class="movie-details">
+                <h2 id="movieTitle" class="movie-title"></h2>
+                <div class="movie-meta">
+                    <span id="movieYear" class="meta-item"></span>
+                    <span id="movieRuntime" class="meta-item"></span>
+                    <span id="movieGenre" class="meta-item"></span>
+                </div>
+
+                <div class="movie-plot">
+                    <h3>Plot</h3>
+                    <p id="moviePlot"></p>
+                </div>
+
+                <div class="movie-info">
+                    <div class="info-item">
+                        <span class="info-label">Director:</span>
+                        <span id="movieDirector" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Actors:</span>
+                        <span id="movieActors" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🎬 Movie & OTT Search Website</p>
+        <p class="footer-sub">Powered by OMDb API</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
